@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vms-azul-escuro: #1a2a3a;
+  --vms-laranja: #f59e0b;
+
+  background-color: #ffffff;
+  color: #213547;
+}
+
+.Toastify__toast--success {
+    background-color: var(--vms-azul-escuro) !important;
+    color: #fff !important;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+    fill: var(--vms-laranja) !important;
+}
+
+.Toastify__progress-bar--success {
+    background: var(--vms-laranja) !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+}
