@@ -29,6 +29,7 @@ export default function Login() {
       localStorage.setItem("token", response.data.token);
       toast.success("Bem-vindo(a) ao Hotel VMS!");
       navigate("/dashboard");
+    // eslint-disable-next-line no-unused-vars
     } catch (err) {
       toast.error("Usuário ou senha inválidos! Tente novamente.");
     }

@@ -41,14 +41,12 @@ services:
       - ./backend:/app
       - /app/node_modules
 
-  frontend:
+frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
       args:
-        VITE_API_URL: /api
-    container_name: hotel_vms_frontend
-    restart: always
+        - VITE_API_URL=http://localhost:3000
     ports:
       - "80:80"
     depends_on:

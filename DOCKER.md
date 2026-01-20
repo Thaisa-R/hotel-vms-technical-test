@@ -23,6 +23,13 @@ docker-compose up --build
 
 O parâmetro `--build` força a reconstrução das imagens. Na primeira execução, isso é necessário.
 
+
+## Nota sobre a Comunicação de Rede
+Para que o frontend (porta 80) consiga comunicar com o backend (porta 3000) no browser, o projeto utiliza a variável `VITE_API_URL` injetada via Docker. 
+
+**Importante:** Se o login falhar, certifique-se de que utilizou o comando `docker-compose up --build` para garantir que as URLs de rede foram corretamente propagadas para o contentor do frontend.
+
+
 **Para executar em background (detached mode):**
 ```bash
 docker-compose up -d --build
